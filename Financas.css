@@ -1,0 +1,261 @@
+/* ◘◘◘◘◘◘◘◘◘◘ GLOBAL ◘◘◘◘◘◘◘◘◘◘ */
+:root {
+  --color_title: cadetblue;
+  --color_div: lightgoldenrodyellow;
+  --color_logo: lightpink;
+  --color_cards: lightsteelblue;
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+  background: lightsteelblue;
+  /*font-weight: bold; */
+}
+
+a {
+  color: rgb(19, 156, 19);
+  font-weight: bold;
+  text-decoration: none; /* Retirar underline do link */
+  display: inline-block; /* Inline pega tamanho do item / Block vai até o final */
+  margin-bottom: 0.7rem; /* Necessário o display inline-block acima /\ */
+}
+
+h1 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin-top: -1rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+h2 {
+  margin-top: 3rem;
+  margin-bottom: 2.5rem;
+  color: cadetblue;
+  background: rebeccapurple
+}
+
+/* ◘◘◘◘◘◘◘◘◘◘ HEADER ◘◘◘◘◘◘◘◘◘◘ */
+
+#logo {
+  background: lightgoldenrodyellow;
+  text-align: center;
+  padding: 6rem;
+}
+
+/* ◘◘◘◘◘◘◘◘◘◘ BODY ◘◘◘◘◘◘◘◘◘◘ */
+
+.container {
+  width: min(90vw, 800px); /* Largura responsiva (viewport-width) */
+  margin: auto;
+}
+
+#section_balance {
+  margin-top: -7rem;
+  background: lightsteelblue;
+}
+
+#section_transaction {  /* Responsividade na tela */
+  display: block;   
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* CSS Trick p/ manter visível para leitores de tela */
+.h2_titles { 
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.cards {
+  background: royalblue;
+  padding: 2rem 3rem;
+  border-radius: 0.5rem;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+}
+
+.cards h3 {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cards h3 span {
+  text-align: center;
+  margin-left: 1rem;
+}
+
+.cards p {
+  font-weight: bold;
+  line-height: 2.5rem; /* Espaçar linha dentro da div */
+}
+
+.cards.total {
+  font-weight: bold;
+  line-height: 2.5rem; /* Espaçar linha dentro da div */
+  background: green;
+}
+
+/* ◘◘◘◘◘◘◘◘◘◘ TABLE ◘◘◘◘◘◘◘◘◘◘ */
+
+#table {
+  width: 100%;
+  border-spacing: 0.25rem 0 0 0.25rem;
+  
+}
+
+#table thead th {
+  background: lightgoldenrodyellow;
+  text-align: center;
+}
+
+#table tbody td {
+  background: lightgoldenrodyellow;
+  text-align: center;
+  font-weight:bold;
+}
+
+/* Seleciona o 1 elemento filho 
+table thead tr th:first-child,
+table tbody tr td:first-child {
+  color: orchid;
+}    */
+
+#table .money_receive {
+  color: green;
+}
+
+#table .money_spent {
+  color: crimson;
+}
+
+#table tbody tr td img {
+  background: lightgoldenrodyellow;
+}
+
+/* ◘◘◘◘◘◘◘◘◘◘ HOOVER ◘◘◘◘◘◘◘◘◘◘ */
+
+a:hover {
+  color: rgb(17, 187, 17);  
+}
+
+#table tbody tr td:hover {
+  background: orchid;
+  opacity: 5;
+}
+
+.button_save:hover {
+  background: rgb(28, 168, 28);
+} 
+
+.button_cancel:hover {
+background: rgb(214, 37, 73);
+}
+
+
+
+/* ◘◘◘◘◘◘◘◘◘◘ MODAL ◘◘◘◘◘◘◘◘◘◘ */
+ 
+.modal_transparent {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(0, 0, 0, 0.8); /* Cor p/ modal (bem transparente) */
+  position: fixed;
+  top: 0; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  /* Padrão para esconder modal */
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal_transparent.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  background: lightsteelblue;
+  padding: 2rem;
+  max-width: 500px;  /* Adaptação máxima à largura */
+  width: 90%;  /* Adaptação máxima à largura */
+}
+
+/* ◘◘◘◘◘◘◘◘◘◘ INPUT ◘◘◘◘◘◘◘◘◘◘ */
+
+#formulario {
+  max-width: 500px;
+}
+
+#formulario h2 {
+  background: royalblue;
+  color: black;
+  border-radius: 2rem;
+  text-align: center;
+}
+
+#formulario form input {
+  border: none;
+}
+
+#description, #money, #date {
+  background: aliceblue;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+.input_group small {
+opacity: 50%;
+}
+
+.input_button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.button_cancel {
+  background: rgb(226, 72, 103);
+  font-weight: bold;
+  padding: 0.5rem 4rem;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.button_save {
+  background: limegreen;
+  font-weight: bold;
+  padding: 0.5rem 4.5rem;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+
+/* ◘◘◘◘◘◘◘◘◘◘ FOOTER ◘◘◘◘◘◘◘◘◘◘ */
+
+
+/* ◘◘◘◘◘◘◘◘◘◘ DESIGN RESPONSIVO ◘◘◘◘◘◘◘◘◘◘ */
+
+@media (min-width: 800px) {
+  html {
+    font-size: 87.5%;
+  }
+
+  #section_balance {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* Fração na caixa */
+    gap: 1rem;
+  }
+}
